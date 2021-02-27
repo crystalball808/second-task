@@ -1,0 +1,122 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 86px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: orange;
+    z-index: 30;
+    @media (max-width: 520px ) {
+        flex-direction: column;
+        height: 171px;
+    }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 80vw;
+  background-color: #ffe393;
+  margin: 0 auto;
+  padding-top: 25px;
+  .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+    width: 250px;
+    height: 250px;
+    border: 5px solid darkgrey;
+    border-radius: 100%;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    -moz-transition: -moz-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    &:hover {
+      border: 5px solid orange;
+      transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+  }
+  
+  @media (min-width: 1340px) and (max-width: 4000px) {
+    .image-wrapper {
+      &:nth-child(4n + 1) {
+        border: 5px solid red;
+      }
+
+      &:hover {
+        border: 5px solid orange;
+        transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+  @media (min-width: 1005px) and (max-width: 1339px) {
+    .image-wrapper {
+      &:nth-child(3n + 1) {
+        border: 5px solid red;
+      }
+
+      &:hover {
+        border: 5px solid orange;
+        transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+
+  @media (min-width: 670px) and (max-width: 1004px) {
+    .image-wrapper {
+      &:nth-child(2n + 1) {
+        border: 5px solid red;
+      }
+
+      &:hover {
+        border: 5px solid orange;
+        transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+
+  @media (max-width: 669px) {
+    .image-wrapper {
+    border: 5px solid red;
+
+      &:hover {
+        border: 5px solid orange;
+        transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.button-undo {
+    width: 100vw;
+    font-size: xx-large;
+    color: white;
+    background-color: orange;
+    border-style: none;
+    cursor: pointer;
+}
